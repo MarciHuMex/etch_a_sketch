@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {   
     const container = document.getElementById("container");
-    const gridSize =60;
+    let gridSize =75;
     const flexBasis = 100 / gridSize;
 
     for (let i = 0; i < gridSize * gridSize; i++) {
@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
         gridItem.classList.add("grid-item");
         gridItem.style.flex = `1 0 ${flexBasis}%`; // Corrected backticks here
         container.appendChild(gridItem);
+
+        gridItem.addEventListener("mouseenter", function() {
+            gridItem.style.backgroundColor = "black"; 
+        });
+
+        gridItem.addEventListener("mouseleave", function() {
+            gridItem.style.backgroundColor = "";
+        });
     }
 });
+
 
