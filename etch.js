@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+
     // Function to handle resetting the grid
     function resetGrid() {
         let newSize = prompt("Enter the number of squares per side for the new grid (maximum 100):");
